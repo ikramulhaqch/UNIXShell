@@ -1,0 +1,109 @@
+1    cleaar
+2    ls
+3     nice
+4    ali
+5    ls
+6    clear
+7    clear
+8    
+9    ls
+10    clear
+11    ls
+12    whoami
+13    wc shell.c
+14    
+15    clear
+16    ls
+17    clear
+18    ls
+19    clear
+20    clear
+21    ls
+22    clear
+23    clear
+24    [A
+25    clear
+26    clear
+27    clear
+28    clear
+29    whoami
+30    
+31    whoami
+32    
+33    whoami
+34    clear
+35    whoami
+36    
+37    ls
+38    clear
+39    clear
+40    clear
+41    whoami
+42    whoami
+43    clear
+44    ls
+45    
+46    clear
+47    cleaar
+48    clear
+49    clear
+50    ls
+51    clear
+52    ls
+53    ls
+54    clear
+55    ls
+56    clear
+57    clear
+58    ls
+59    whoami
+60    
+61    history
+62    clear
+63    ls
+64    clear
+65    ls
+66    clear
+67    
+68    
+69    
+70    
+71    
+72    
+73    
+74    clear
+75    
+76    
+77    ls
+78    clear
+79    
+80    
+81    
+82    
+83    
+84    
+85    
+86    
+87    
+88    
+89    
+90    
+91    clear
+92    ls
+93    clear
+94    ls
+95    clear
+96    ls
+97    clear
+98    ls
+99    
+100    
+101    
+102    
+103    
+104    
+105    
+106    clear
+107    clear
+108    git init
+109    
