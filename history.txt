@@ -105,5 +105,626 @@
 105    
 106    clear
 107    clear
-108    git init
-109    
+108    clear
+109    ls
+110    history\
+111    clear
+112    ls
+113    clear
+114    clear
+115    clear
+116    clear
+117    clear
+118    clear
+119    cd ..
+120    cd /
+121    cd ..
+122    cd ..
+123    clear
+124    cd ..
+125    clear
+126    cd ..
+127    cd ..
+128    cd ..
+129    cd ..
+130    ls
+131    mkdir ali
+132    ls
+133    cd ali
+134    man chdir
+135    clear
+136    ls
+137    clear
+138    ls
+139    cd ..
+140    clear
+141    ls
+142    cd ..
+143    clear
+144    ls
+145    cd ..
+146    cd ..
+147    ls
+148    cd ali
+149    clear
+150    ls
+151    ls
+152    clear
+153    ls
+154    clear
+155    c;ear
+156    c;ear
+157    clear
+158    ls
+159    cd ali
+160    ls
+161    clear
+162    ls
+163    cd ..
+164    [A[A[A[A
+165    exit
+166    clear
+167    ls
+168    exit
+169    ls
+170    clear
+171    exit
+172    ls
+173    clear
+174    clear
+175    ls
+176    whoami
+177    clear
+178    clear
+179    exit
+180    ls
+181    man ls
+182    man ls | grep ls
+183    ls
+184    man ls | wc
+185    man ls
+186    [A
+187    clear
+188    ls
+189    ls | wc
+190    clear
+191    ls
+192    ls | wc
+193    clear
+194    ls
+195    ls | wc
+196    ls |wc
+197    ls | wc
+198    clear
+199    ls
+200    man ls | wc
+201    clear
+202    man ls | wc
+203    man ls | wc
+204    
+205    man ls | wc
+206    man ls | wc
+207    man ls | wc
+208    [A
+209    clear
+210    ls
+211    man ls
+212    man ls | wc
+213    man ls | wc
+214    man ls | wc
+215    clear
+216    ls
+217    man ls | wc
+218    man ls | wc
+219    man ls | wc
+220    clear
+221    man ls |  wc
+222    man ls | wc
+223    clear
+224    ls
+225     man ls | wc
+226    clear
+227    ls
+228    clear
+229    ls
+230    man ls | wc
+231    clear
+232    ls
+233    man ls | wc
+234    clear
+235    ls
+236    man ls | wc
+237    
+238    ls
+239    man ls | wc
+240    clear
+241    ls
+242    man ls | wc
+243    clear
+244    ls
+245    man ls | wc
+246    clear
+247    man ls | wc
+248    man ls | wc
+249    
+250    man ls | wc
+251    man ls | wc
+252    man ls | wc
+253    man ls |  wc
+254    man ls | wc
+255    clear
+256    
+257    man ls | wc
+258    man ls | grep ls
+259    
+260    clear
+261    man ls | wc
+262    clear
+263    man ls | wc
+264    man ls | wc
+265    man ls | wc
+266    man ls | wc
+267    man ls | cat
+268    clear
+269    man ls | grep ls
+270    man ls | grep ls
+271    man ls | wc
+272    man ls |wc
+273    man ls | wc
+274    man ls | wc
+275    man ls | wc
+276    clear
+277    msn ls | wc
+278    man ls | wc
+279    man ls | wc
+280    man ls | wc
+281    man ls | wc
+282    man ls | wc
+283    man ls | wc
+284    man ls | wc
+285    man dup2
+286    man ls | grep ls
+287    clear
+288    man ls | grep ls | wc
+289    man ls | grep ls | wc
+290    clear
+291    man ls | grep ls | wc
+292    ls
+293    cat f.txt
+294    clear
+295    cat f.txt | wc
+296    cat f.txt | wc
+297    man write
+298    man 2 write
+299    gcc exec.c
+300    ./a.out
+301    D
+302    man ls | grep ls
+303    cat  f.txt | wc
+304    clear
+305    cat f.txt | grep 2
+306    clear
+307    cat f.txt | grep 2
+308    cat f.txt
+309    cat f.txt | less
+310    gcc exec.c
+311    ./a.out
+312    clear
+313    clear
+314    ls
+315    clear
+316    cd ..
+317    clear
+318    ls
+319    clear
+320    exit
+321    clear
+322    ls
+323    man ls
+324    man ls | grep ls
+325    man ls  | grep ls
+326    clear
+327    ls
+328    man ls | wc
+329    clear
+330    clear
+331    cat f.txt | grep 2
+332    clear
+333    man ls | grep ls
+334    man ls | wc
+335    man ls
+336    man ls | grep ls
+337    msn ls
+338    man ls
+339    man ls | grep ls
+340    man ls | grep ls
+341    cd ..
+342    ls
+343    clear
+344    man ls | grep ls
+345    clear
+346    man ls | grep ls
+347    clear
+348    man ls | grep ls
+349    man ls | grep ls
+350    man ls | grep ls
+351    man ls | grep ls
+352    man ls | grep ls
+353    clear
+354    man ls | grep ls
+355    man ls | grep ls
+356    clear
+357    man ls | grep ls
+358    
+359    clear
+360    man ls | grep ls
+361    man ls | grep ls
+362    man ls | grep ls
+363    clear
+364    man ls | grep ls
+365    clear
+366    man ls | grep ls
+367    man ls | grep ls
+368    man ls | less
+369    man ls | less
+370    clear
+371    man ls | grep
+372    man ls | less
+373    man ls | wc
+374    man ls | grep ls | less
+375    man ls | grep ls
+376    man ls | grep ls
+377    clear
+378    man ls | grep ls
+379    
+380    [A[A
+381    man ls | grep ls
+382    kd
+383    clear
+384    man ls | grep ls
+385    man ls | grep ls
+386    clear
+387    man ls | grep ls
+388    clear
+389    clear
+390    man ls | grep ls
+391    man ls | grep ls
+392    man ls | grep ls | wc
+393    man ls | grep ls | less
+394    man ls | grep ls
+395    clear
+396    man ls | wc
+397    man ls | grep ls
+398    clear
+399    man ls
+400    clear
+401    ./a.out  &
+402    clear
+403    jobs
+404    c
+405    ./a.out &
+406    clear
+407    jobs
+408    jobs
+409    ./a.out &
+410    clea
+411    clear
+412    jobs
+413    clear
+414    ./a.out &
+415    
+416    c
+417    ./a.out &
+418    .
+419    gcc exec.c
+420    ./a.out &
+421    sleep 100 &
+422    sleep &
+423    clear
+424    sleep 100  &
+425    sleep 100 &
+426    sleep 100 &
+427    
+428    clear
+429    jobs
+430    clear
+431    echo $$
+432    
+433    clear
+434    jobs
+435    ./a.out &
+436    
+437    jobs
+438    jons
+439    jobs
+440    clear
+441    clear
+442    sleep 100 &
+443    jobs
+444    clear
+445    g
+446    clear
+447    sleep 100 &
+448    jobs
+449    clear
+450    sleep 100 &
+451    
+452    sleep 100 &
+453    
+454    clear
+455    sleep 100  &
+456    clear
+457    sleep 100 &
+458    sleep 100 &
+459    
+460    jobs
+461    sleep 100 &
+462    jobs
+463    clear
+464    sleep 100 &
+465    clear
+466    jobs
+467    ./a.out &
+468    clear
+469    jobs
+470    jobs
+471    jobs
+472    jobs
+473    clear
+474    jobs
+475    clear
+476    jobs
+477    jobs
+478    jobs
+479    clear
+480    jobs
+481    jobs
+482    clear
+483    ps
+484    clear
+485    jobs -a
+486    ps -a
+487    clear
+488    ls
+489    clear
+490    ls
+491    clear
+492    ls
+493    clear
+494    ls
+495    clear
+496    ls
+497    clear
+498    ls
+499    clear
+500    ls
+501    clear
+502    ls
+503    clear
+504    sleep 100 &
+505    jobs
+506    kill %1
+507    clear
+508    ls
+509    clear
+510    sleep 100 &
+511    
+512    jobs
+513    kill %1
+514    jobs
+515    jobs
+516    clear
+517    clear
+518    sleep 100 &
+519    jobs
+520    kill %1
+521    jobs
+522    man kill
+523    man 2 kill
+524    clear
+525    jobs
+526    sleep 100 &
+527    kill %1
+528    jobs
+529    jobs
+530    sleep 100 &
+531    jobs
+532    kill %1
+533    jobs
+534    jobs
+535    cd /proc/7522
+536    jobs
+537    sleep 100 &
+538    jobs
+539    kill %1
+540    jobs
+541    cd /prroc/7528
+542    jobs
+543    jobs
+544    jobs
+545    cd /proc/7528
+546    clear
+547    sleep 100 &
+548    clear
+549    jobs
+550    kill %1
+551    jobs
+552    jobs
+553    jobs
+554    jobs
+555    jobs
+556    clear
+557    sleep 100 &
+558    jobs
+559    kill %1
+560    jobs
+561    jobs
+562    man kill
+563    man 2 kill
+564    clear
+565    jobs
+566    sleep 100 &
+567    jobs
+568    kill %1
+569    jobs
+570    jobs
+571    clear
+572    msn ls
+573    man ls
+574    man ls | wc
+575    man ls | grep ls | wc
+576    man ls | wc
+577    man ls | wc
+578    clear
+579    clear
+580    man ls | wc
+581    clear
+582    clear
+583    man ls | grep ls
+584    clear
+585    man ls | grep ls | wc
+586    clear
+587    msn ls | grep ls
+588    man ls | grep ls
+589    clear
+590    man ls | grep ls | wc
+591    man ls | grep ls | wc
+592    clear
+593    clear
+594    clear
+595    man ls |  grep ls
+596    man ls | grep ls | less
+597    man ls | grep ls
+598    man ls | grep ls
+599    clear
+600    man ls | grep ls
+601    clear
+602    man ls | grep ls
+603    msn ls | grep ls
+604    clear
+605    man ls | grep ls
+606    man ls | grep ls
+607    man ls | grep ls
+608    clear
+609    ls
+610    clear
+611    ls
+612    man ls | wc
+613    man ls | wc
+614    man ls | wc
+615    man ls|wc
+616    man ls |wc
+617    man ls| wc
+618    man fputss
+619    man fputs
+620    ls
+621    clear
+622    man ls | grep ls | wwc
+623    clear
+624    man ls | grep ls | wc
+625    clear
+626    clear
+627    clear
+628    man ls | grep ls | wc
+629    clear
+630    
+631    man ls | grep ls | wc
+632    
+633    clear
+634    man ls | grep ls | wc
+635    
+636    man ls | grep ls
+637    man ls | grep ls | wc
+638    
+639    man ls | grep ls|wc
+640    
+641    man ls | grep ls | wc
+642    man ls | grep ls
+643    clear
+644    ls
+645    clear
+646    man ls | grep ls
+647    man ls | wc
+648    clear
+649    man ls | wc
+650    man ls | grep ls | wc
+651    man ls | wc
+652    clear
+653    ls
+654    clear
+655    ls
+656    clear
+657    man ls
+658    man ls | wc
+659    man ls|wc
+660    man ls |wc
+661    man ls | wc
+662    clear
+663    man ls |grep ls
+664    man ls|grep ls
+665    man ls | grep ls
+666    clear
+667    clear
+668    man ls | grep ls
+669    man ls | grep ls | wc
+670    clear
+671    jobs
+672    sleep 100 &
+673    jobs
+674    kill %1
+675    jobs
+676    jobs
+677    g
+678    clear
+679    jobs
+680    sleep 100 &
+681    jobs
+682    jobs
+683    kill %1
+684    jobs
+685    clear
+686    jobs
+687    sleep 100 &
+688    jobs
+689    kill %1
+690    jobs
+691    jobs
+692    kill %1
+693    jobs
+694    jobs
+695    clear
+696    sleep 100 &
+697    jobs
+698    kill %1
+699    jobs
+700    [A
+701    clear
+702    sleep 100 &
+703    jobs
+704    kill %1
+705    jobs
+706    clear
+707    ls
+708    clear
+709    sleep 100 &
+710    jobs
+711    kill %1
+712    jobs
+713    jobs
+714    clear
+715    ls
+716    clear
+717    ./a.out
+718    ls
+719    ls; date;whoami;cat f.txt
+720    clear
+721    sleep 100 &
+722    jobs
+723    jobs
+724    clear
+725    sleep 100 &
+726    jobs
+727    kill %1
+728    jobs
+729    git status
+730    git add s
