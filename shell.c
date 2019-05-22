@@ -16,6 +16,18 @@
 int argnum=0;
 int argnum1=0;
 
+struct Job
+{
+    int cpid;
+    char name[30];
+    char status[30];
+};
+
+
+struct Job arr[100];
+int ind=0;
+
+
 void print(char** x,int a){
     for(int i=0;i<a;i++){
         for(int j=0;j<ARGLEN;j++){
@@ -33,6 +45,15 @@ int countNoOfPipes(char** x, int a){
             count++;
         }
     }
+    return count;
+}
+
+int countNoOfPipes2(char* x){
+    int count=0;
+    int i=0;
+    while(x[i++]!='\0')
+        if(x[i]=='|')
+            count++;
     return count;
 }
 
@@ -64,17 +85,37 @@ char ** tokenize(char* cmdline){
     return arglist;
 }
 
+void updateStatus(int indi){
+    char scpid[50];
+    sprintf(scpid, "%d", arr[indi].cpid);
+    char filename[50]="/proc/";
+    char temp[20] = "/status";
+    strcat(scpid,temp);
+    strcat(filename,scpid);
+    FILE* fp = fopen(filename,"r");
+    if(fp!=NULL){
+        fgets(arr[indi].status,30,fp);
+        fgets(arr[indi].status,30,fp);
+        fgets(arr[indi].status,30,fp);
+        int i=0;
+        while(arr[indi].status[i++]!='\0');
+        arr[indi].status[i-=2]='\0';
+    }
+    else {
+        strcpy(arr[indi].status,"Terminated");
+    }
+}
+
 
 int execute(char** arglist){
 	int status;
+    int fd[2];
+    pipe(fd);
     int noOfPipes=countNoOfPipes(arglist,argnum);
-    int **pip = (int **)malloc(sizeof(int *)*noOfPipes);
-    for(int i=0;i<noOfPipes;i++)
-        pip[i]=(int *)malloc(sizeof(int)*2);
-    for(int i=0;i<noOfPipes;i++)
-        pipe(pip[i]);
     int p=0;
-    while(p<noOfPipes+1){
+    int d1=dup(0);
+    int d2=dup(1);
+    while(p<=noOfPipes){
         int cpid = fork();
         if(cpid== -1){
             perror("fork failed");
@@ -88,7 +129,7 @@ int execute(char** arglist){
                 int k=0,nop=0;
                 int flag=0;
                 for(int i=0;i<argnum;i++){
-                    printf("%s\n",arglist[i] );
+                    //printf("%s\n",arglist[i] );
                     if(arglist[i][0]=='|'){
                         nop++;
                     }
@@ -114,11 +155,18 @@ int execute(char** arglist){
                 newcmd[--k]='\0';
                 if((arglist=tokenize(newcmd))==NULL){
                     //exit(0);
+                    
                 }
-                printf("%d:cmd: %s\n",p,newcmd );
+                FILE *fir=fopen("filei.txt","a+");
+                for(int i=0;i<argnum;i++){
+                    fputs(arglist[i],fir);
+
+                }
+                fclose(fir);
+                //printf("%d:cmd: %s\n",p,newcmd );
             }
-            printf("args\n");
-            print(arglist,argnum);
+            //printf("args\n");
+            //print(arglist,argnum);
             if(arglist[argnum-1][0]=='&'){
                 arglist[argnum-1]=NULL;
                 argnum--;
@@ -155,26 +203,27 @@ int execute(char** arglist){
             //  }
             //  printf("\n");
             // }
-            printf("%d:%d\n", p,noOfPipes);
+            //printf("%d:%d\n", p,noOfPipes);
             if(p==0 && noOfPipes>0){
-                printf("aya1\n");
-                close(pip[p][0]);
-                dup2(pip[p][1],1);
+                //printf("aya1\n");
+                close(fd[0]);
+                dup2(fd[1],1);
             }
             else if(p>0 && p<noOfPipes){
-                printf("aya2\n");
-                dup2(pip[p-1][0],0);
-                dup2(pip[p][1],1);
+                //printf("aya2\n");
+                dup2(fd[0],0);
+                dup2(fd[1],1);
             }
             else if(p>0 && p==noOfPipes){
-                printf("aya3\n");
-                //close(pip[p][1]);
-                dup2(pip[p-1][0],0);
+                //printf("aya3\n");
+                dup2(fd[0],0);
                 close(1);
                 int fd1=open ("/dev/tty",O_WRONLY);
+                close(fd[1]);
             }
-            printf("ikram\n");
+            //printf("ikram\n");
             int rv=execvp(arglist[0], arglist);
+            printf("ikram\n");
             if(rv==-1){
                 printf("exec not successful\n");
             }
@@ -183,16 +232,34 @@ int execute(char** arglist){
         }
         else{
             if(arglist[argnum-1][0]=='&'){
+                printf("aya\n");
                 waitpid(cpid, &status, WNOHANG);
+                arr[ind].cpid=cpid;
+                char scpid[50];
+                sprintf(scpid, "%d", cpid);
+                strncpy(arr[ind].name,arglist[0],ARGLEN);
+                char filename[50]="/proc/";
+                char temp[20] = "/status";
+                strcat(scpid,temp);
+                strcat(filename,scpid);
+                FILE* fp = fopen(filename,"r");
+                if(fp!=NULL){
+                    fgets(arr[ind].status,30,fp);
+                    fgets(arr[ind].status,30,fp);
+                    fgets(arr[ind].status,30,fp);
+                    int i=0;
+                    while(arr[ind].status[i++]!='\0');
+                    arr[ind].status[i-=2]='\0';
+                    ind++;
+                }
+                
             }
             else waitpid(cpid, &status, 0);
             p++;
-            printf("ikram ul haq\n");
-            int fd0=open("/dev/tty",O_RDONLY);
-            dup2(fd0,0);
-            int fd1=open("/dev/tty",O_WRONLY);
-            dup2(fd1,1);
-            printf("no.: %d\n",p);
+            signal(SIGCHLD,SIG_IGN);
+            dup2(d1,0);
+            dup2(d2,1);
+            //printf("no.: %d\n",p);
             //printf("child exited with status %d \n", status >> 8);
         }
     }
@@ -332,7 +399,8 @@ char* read_cmd(char* prompt, FILE* fp){
    	uid_t uid = getuid();
     struct passwd *psw = getpwuid(uid);
     getcwd(prompt,1024);   
-    
+    int fd0= open("/dev/tty",O_RDWR);
+    dup2(fd0,1);
     printf("\033[1;32m%s@\033[1;34m%s\033[0m$",psw->pw_name, prompt);
   	int c; //input character
    	int pos = 0; //position of character in cmdline
@@ -355,7 +423,12 @@ char* read_cmd(char* prompt, FILE* fp){
 int main(){
 	signal(2,SIG_IGN);
 	signal(3,SIG_IGN);
-	
+	for(int i=0;i<ind;i++){
+        for(int j=0;j<30;j++){
+            arr[i].name[j]='\0';
+            arr[i].status[j]='\0';
+        }
+    }
 	char *cmdline;
     char**arglist1;
    	char** arglist;
@@ -368,6 +441,10 @@ int main(){
                 printf("No commands in history.\n");
                 continue;
             }
+        }
+        if(countNoOfPipes2(cmdline)>0){
+            system(cmdline);
+            continue;
         }
     	if((arglist1=tokenizeBySemiColon(cmdline))!=NULL){
             int i=0;
@@ -382,11 +459,27 @@ int main(){
                     else if(arglist[0][0]=='e' && arglist[0][1]=='x' && arglist[0][2]=='i' && arglist[0][3]=='t'){
                         exit(0);
                     }
-                    else if(arglist[0]=="jobs"){
-
+                    else if(arglist[0][0]=='j' && arglist[0][1]=='o' && arglist[0][2]=='b' && arglist[0][3]=='s'){
+                        for(int i=0;i<ind;i++){
+                            updateStatus(i);
+                            if(strcmp(arr[i].status,"Terminated")!=0)
+                                printf("[%d]  %s\t%s\n",i+1,arr[i].status,arr[i].name );
+                        }
+                        break;
                     }
-                    else if(arglist[0]=="kill"){
-
+                    else if(arglist[0][0]=='k' && arglist[0][1]=='i' && arglist[0][2]=='l' && arglist[0][3]=='l'){
+                        char nmbr[10]="\0";
+                        int k=0;
+                        while(cmdline[i++]!='%');
+                        while(cmdline[i]!='\0'){
+                            nmbr[k]=cmdline[i];
+                            i++;k++;
+                        }
+                        int number= atoi(nmbr);
+                        printf("id: %d\n", number);
+                        kill(arr[number-1].cpid,2);
+                        updateStatus(number-1);
+                        break;
                     }
                     else if(arglist[0]=="help"){
 
