@@ -205,7 +205,6 @@ int execute(char** arglist){
             // }
             //printf("%d:%d\n", p,noOfPipes);
             if(p==0 && noOfPipes>0){
-                //printf("aya1\n");
                 close(fd[0]);
                 dup2(fd[1],1);
             }
@@ -232,7 +231,6 @@ int execute(char** arglist){
         }
         else{
             if(arglist[argnum-1][0]=='&'){
-                printf("aya\n");
                 waitpid(cpid, &status, WNOHANG);
                 arr[ind].cpid=cpid;
                 char scpid[50];
